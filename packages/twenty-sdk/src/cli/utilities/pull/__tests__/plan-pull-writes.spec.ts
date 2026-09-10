@@ -392,7 +392,7 @@ describe('planPullWrites', () => {
     expect(plan.deletions).toEqual([]);
   });
 
-  it('should not call a local entity unknown to the workspace when the export reported it', () => {
+  it('should not report a local file as local-only when the export reported its entity', () => {
     const scannedFiles: ScannedDefineFile[] = [
       {
         relativePath: 'src/roles/guest.role.ts',
